@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonton點菜</title>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      .filter {
+        display: none;
+      }
+      .cartBtn {
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 網頁主內容容器 開始 -->
+    <div class="container d-flex flex-column align-items-center pt-3">
+      <!-- 頭部-主旨容器 開始 -->
+      <header class="d-flex flex-column align-items-center">
+        <div class="d-flex flex-column align-items-center gap-4">
+          <!-- 店家圖片 -->
+          <img src="./bonton_logo.png" class="w-50 h-50" alt="" />
+          <!-- 主旨內容 -->
+          <p class="fs-5 lh-lg text-center mb-4">
+            營業時間：16:30 - 01:30 <br />
+            Bonton平價快炒： 臺中市南屯區益文二街89號
+          </p>
+        </div>
+      </header>
+      <!-- 頭部-主旨容器 結束 -->
+
+      <!-- 網頁主內容 開始 -->
+
+      <!-- 瀏覽列 - 各菜餚種類 按鈕 - js函式渲染 -->
+      <nav class="mt-1 d-inline-flex gap-1 flex-wrap"></nav>
+
+      <!-- 各菜餚種類按鈕下 顯示清單列 - js函式渲染 -->
+      <div class="menuListWrap w-100 mt-1"></div>
+      <!-- 網頁主內容 結束 -->
+      <br />
+      <br />
+
+      <!-- 購物車按鈕 - 懸浮 -->
+    </div>
+    <!-- 網頁主內容容器 結束 -->
+
+    <!-- 購物車清單內容容器 開始 -->
+    <div class="filter bg-secondary container-fluid position-absolute top-0">
+      <!-- 購物車清單關閉按鈕 -->
+      <button
+        class="closeBtn btn btn-light border border-3 position-absolute top-0 end-0 mt-2 me-2"
+      >
+        關閉
+      </button>
+      <!-- 購物車清單版面 開始 -->
+      <div class="cartContentWrap containe-md w-100">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <!-- 購物車清單內容 開始 -->
+          <div class="cartContent col-md-4 bg-light vh-100 overflow-hidden">
+            <!-- 購物車-已選菜名列表框 (內容js函式渲染) -->
+            <br />
+            <div
+              class="ordersWrap d-flex flex-column overflow-scroll h-75 pt-4"
+            ></div>
+            <!-- 送出按鍵＆使用者名稱 -->
+            <div class="mt-4 d-grid gap-3">
+              <input type="text" name="nickName" placeholder="請輸入您的暱稱" />
+              <button class="btn btn-warning submitBtn">送出</button>
+            </div>
+          </div>
+          <!-- 購物車清單內容 結束 -->
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+      <!-- 購物車清單版面 結束 -->
+    </div>
+    <!-- 購物車清單內容容器 結束 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/data.js"></script>
+    <script src="./JS/app.js"></script>
+  </body>
+</html>
